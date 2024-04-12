@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#grad1{
+position: absolute;
+width: 100%;
+height: 500%;;
+overflow: hidden;
+background-image: linear-gradient(to top,rgb(0, 0, 0) 20%,rgb(255,255,255)90%);
+}
+
+#sky{
+  position:relative;
+  width: 1000px;
+	height: 500px;
+  top: 2%;
+  left: 15%;
+  overflow: hidden;
+  background-image: linear-gradient(to top,rgb(255, 153, 0)-70%,rgb(0,38,171));
+}
+
+#rail {
+  position:absolute;
+  height: 124px;
+  width: 1200px;
+  transform: translate(180px,280px) perspective(700px) rotateY(75deg) rotateZ(-7deg); 
+  background: linear-gradient(to top,rgb(147,0,0),rgb(255,153,0) 350%);
+}
+
+#ground{
+  position:absolute;
+  height: 300px;
+  width: 500px;
+  transform: translate(550px,350px);
+  background: linear-gradient(to right,rgb(147,0,0)20%,rgb(255,153,0)90%);
+}
+
+#wall{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(to top,rgb(147,0,0)50%,rgb(255,153,0));
+  height: 730px;
+  width: 1480px;
+  clip-path:polygon(56% 50%, 70% 50%, 70% 0%, 56% 0%);
+}
+
+#ceiling{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(to top,rgb(147,0,0)50%,rgb(255,153,0));
+height: 730px;
+width: 1480px;
+clip-path:polygon(0% 10%, 100% 20%, 100% 0%, 0% 0%);
+}
+
+
+#bridge{
+  position:absolute;
+  top:275px;
+  height: 10px;
+  width: 2000px;
+  background-image: linear-gradient(to top,rgb(255, 76, 0)10%,rgb(255,217,201));
+}
+
+.column {
+  position:absolute;
+  top: 10px;
+  left:200px;
+  height: 2000px;
+  width: 10px;
+  background-image: linear-gradient(to top,rgb(255, 76, 0)10%,rgb(255,217,201));
+}
+
+
+#pillar1 {
+  position:absolute;
+  height: 125px;
+  left:400px;
+  width: 20px;
+  top:320px;
+  background: rgb(134, 134, 134);
+}
+#pillar2 {
+  position:absolute;
+  height: 125px;
+  left:690px;
+  width: 20px;
+  top:320px;
+  background: rgb(134, 134, 134);
+}
+
+</style>
+</head>
+
+
+<body>
+<div id="grad1">
+  <div id="sky">
+    <div id="bridge"></div>
+    <div class="column"></div>
+    <div id="ground"></div>
+    <div id="rail"></div>
+    <div id="ceiling"></div>
+    <div id="wall"></div>
+
+
+  </div>
+
+</div>
+</body>
+</html>
