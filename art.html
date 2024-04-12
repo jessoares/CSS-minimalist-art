@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+#grad1 {
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  overflow: hidden;
+  background-image: linear-gradient(to top,rgb(255, 153, 0)-70%,rgb(0,38,171));
+}
+
+
+
+#rail {
+  position:absolute;
+  height: 125px;
+  width: 2000px;
+  transform: translate(200px,430px) perspective(1200px) rotateY(75deg) rotateZ(-5deg); 
+  background: linear-gradient(to top,rgb(147,0,0),rgb(255,153,0) 350%);
+}
+#ground{
+  position:absolute;
+  height: 350px;
+  width: 1150px;
+ background: linear-gradient(to right,rgb(147,0,0)20%,rgb(255,153,0)70%);
+  transform: translate(650px,575px);
+}
+
+
+#wall{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(to top,rgb(147,0,0)20%,rgb(255,153,0));
+height: 730px;
+width: 1480px;
+clip-path:polygon(78% 79%, 100% 79%, 100% 0%, 78% 0%);
+}
+
+#ceiling{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(to top,rgb(147,0,0)20%,rgb(255,153,0));
+height: 730px;
+width: 1480px;
+clip-path:polygon(0% 10%, 100% 20%, 100% 0%, 0% 0%);
+}
+
+
+
+
+#wall2{
+  position:absolute;
+  right:-15px;
+  top:-50px;
+  height: 650px;
+  width: 330px;
+  background: linear-gradient(to top,rgb(147,0,0),rgb(255,153,0));
+}
+
+
+#bridge{
+  position:absolute;
+  top:450px;
+  height: 10px;
+  width: 2000px;
+  background: rgb(36, 36, 36);
+}
+.column {
+  position:absolute;
+  height: 1000px;
+  width: 10px;
+  top:450px;
+  background: rgb(36, 36, 36);
+}
+#pillar1 {
+  position:absolute;
+  height: 125px;
+  left:400px;
+  width: 20px;
+  top:320px;
+  background: rgb(134, 134, 134);
+}
+#pillar2 {
+  position:absolute;
+  height: 125px;
+  left:690px;
+  width: 20px;
+  top:320px;
+  background: rgb(134, 134, 134);
+}
+.column:nth-child(2) {
+  left:50px;
+}
+.column:nth-child(3) {
+  left:100px;
+}
+.column:nth-child(4) {
+  left:150px;
+}
+.column:nth-child(5) {
+  left:200px;
+}
+.column:nth-child(6) {
+  left:250px;
+}
+.column:nth-child(7) {
+  left:300px;
+}
+.column:nth-child(8) {
+  left:350px;
+}
+.column:nth-child(9) {
+  left:400px;
+  width: 20px;
+}
+.column:nth-child(10) {
+  left:690px;
+  width: 20px;
+}
+.column:nth-child(11) {
+  left:750px;
+}
+.column:nth-child(12) {
+  left:800px;
+}
+.column:nth-child(13) {
+  left:850px;
+}
+.column:nth-child(14) {
+  left:900px;
+}
+.column:nth-child(15) {
+  left:950px;
+}
+.column:nth-child(16) {
+  left:1000px;
+}
+.column:nth-child(17) {
+  left:1050px;
+}
+.column:nth-child(18) {
+  left:1100px;
+}
+#bridgeTop{
+  position:absolute;
+  top:443px;
+  height: 7px;
+  width: 2000px;
+  background: rgb(134, 134, 134);
+}
+
+.light {
+  position:absolute;
+  height: 10px;
+  width: 10px;
+  top:430px;
+  background: yellow;
+  border-radius: 40%;
+  left:50px;
+  box-shadow: 0 0 15px 5px yellow;
+  filter: blur(4px);
+}
+
+
+
+.light:nth-child(2){
+  left:150px;
+}
+
+.light:nth-child(3) {
+  left:250px;
+}
+
+.light:nth-child(4) {
+  left:350px;
+}
+
+.light:nth-child(5) {
+  left:750px;
+}
+
+.light:nth-child(6) {
+  left:850px;
+}
+
+.light:nth-child(7) {
+  left:950px;
+}
+
+.light:nth-child(8) {
+  left:1050px;
+}
+
+.pole {
+  position:absolute;
+  height: 15px;
+  width: 3px;
+  top:435px;
+  left:54px;
+  background:rgb(134, 134, 134);
+}
+
+.pole:nth-child(2) {
+  left:154px;
+}
+.pole:nth-child(3) {
+  left:254px;
+}
+
+.pole:nth-child(4) {
+  left:354px;
+}
+
+.pole:nth-child(5) {
+  left:754px;
+}
+.pole:nth-child(6) {
+  left:854px;
+}
+.pole:nth-child(7) {
+  left:954px;
+}
+.pole:nth-child(8) {
+  left:1054px;
+}
+
+
+
+
+</style>
+</head>
+
+
+<body>
+<div id="grad1">
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+  <div id="pillar1"></div>
+  <div id="pillar2"></div>
+  <div id="bridgeTop"></div>
+  <div id="bridge"></div>
+  <div id="ground"> </div>
+  <div id="rail"></div>
+  <div id="wall"></div>
+  <div id="ceiling"></div>
+
+
+</div>
+<div id="poles">
+<div class="pole"></div>
+<div class="pole"></div>
+<div class="pole"></div>
+<div class="pole"></div>
+<div class="pole"></div>
+<div class="pole"></div>
+<div class="pole"></div>
+<div class="pole"></div>
+</div>
+<div id="lights">
+<div class="light"></div>
+<div class="light"></div>
+<div class="light"></div>
+<div class="light"></div>
+<div class="light"></div>
+<div class="light"></div>
+<div class="light"></div>
+<div class="light"></div>
+</div>
+</body>
+</html>
