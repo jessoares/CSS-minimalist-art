@@ -148,6 +148,19 @@ clip-path:polygon(50% 0%, 100% 90%, 100% 0%, 20% 0%);
   box-shadow: 0 0 15px 5px yellow;
   filter: blur(4px);
 }
+.red {
+  position:absolute;
+  height: 10px;
+  width: 10px;
+  top:143px;
+  background: rgb(255, 0, 0);
+  border-radius: 40%;
+  left:352px;
+  box-shadow: 0 0 15px 5px rgb(255, 0, 0);
+  filter: blur(4px);
+}
+
+
 
 .light:nth-child(2){
   left:200px;
@@ -164,6 +177,40 @@ clip-path:polygon(50% 0%, 100% 90%, 100% 0%, 20% 0%);
 .light:nth-child(5) {
   left:700px;
 }
+
+.red:nth-child(2){
+  left:552px;
+}
+
+
+.pole{
+  position:absolute;
+  height: 20px;
+  width: 3px;
+  top:255px;
+  left:103px;
+  background-image: linear-gradient(to top,rgb(255,217,201),rgba(255, 77, 0, 0.253)150%);
+}
+
+.pole:nth-child(2) {
+  left:203px;
+}
+.pole:nth-child(3) {
+  left:303px;
+}
+.pole:nth-child(4) {
+  left:603px;
+}
+.pole:nth-child(5) {
+  left:703px;
+}
+
+.svg-renko{
+  transform: translate(600px,190px);
+}
+
+
+
 
 
 
@@ -192,15 +239,26 @@ clip-path:polygon(50% 0%, 100% 90%, 100% 0%, 20% 0%);
     <div id="rail"></div>
     <div id="ceiling"></div>
     <div id="wall"></div>
+    <div id="poles">
+      <div class="pole"></div>
+      <div class="pole"></div>
+      <div class="pole"></div>
+      <div class="pole"></div>
+      <div class="pole"></div>
+    </div>
+
     <div id="lights">
       <div class="light"></div>
       <div class="light"></div>
       <div class="light"></div>
       <div class="light"></div>
       <div class="light"></div>
-      </div>
-
-
+    </div>
+    <div id="redLights">
+      <div class="red"></div>
+      <div class="red"></div>
+    </div>
+    <img src = "renko.svg" alt="renko" class="svg-renko"/>
   </div>
 
 </div>
